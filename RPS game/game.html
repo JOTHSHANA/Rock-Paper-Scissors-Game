@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS game updated using Objects in JS</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="container">
+    <h2 class="title">Rock Paper Scissors</h2>
+    <button class="move-button" onclick="
+     playGame('Rock');
+    "><img src="images/rock-emoji.png" alt="Rock" class="rock-image image"></button>
+    <button class="move-button" onclick="
+    playGame('Paper');
+    "><img src="images/paper-emoji.png" alt="Paper" class="paper-image image"></button>
+    <button class="move-button" onclick="
+    playGame('Scissors')
+    "><img src="images/scissors-emoji.png" alt="Scissors" class="scissors-image image"></button>
+    <p class="js-score"></p>
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
+    <button class="reset-score-button" onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScore();
+    ">
+        Reset score
+    </button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
+
+<!--// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Solution {
+    public static void main(String[] args) {
+        System.out.println(isArmstrong(153));
+    }
+    public static boolean isArmstrong(int n){
+        int DupInp = n;
+        int counter = 0;
+        while(n>0){
+            counter++;
+            n/=10;
+        }
+        n=DupInp;
+        int sum = 0;
+        while(n>0){
+            int rem = n%10;
+            int Variable = rem;
+            for(int i=1;i<counter;i++){
+                Variable *=rem;
+            };
+            sum += Variable;
+            n/=10;
+        }
+        return sum==DupInp;
+    }
+}-->
